@@ -189,8 +189,9 @@ const ItemCreateView = (props = {}) => {
         toast(err.response.data);
       }
     };
-//
+
   return (
+    <>
     <Toaster />
     <div className={classes.root}>
       <Hero />
@@ -253,6 +254,7 @@ const ItemCreateView = (props = {}) => {
         </Grid>
       </SectionAlternate>
     </div>
+    </>
   );
 };
 
