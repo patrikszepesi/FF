@@ -127,7 +127,7 @@ const FileUpload = ({ values, setValues, setLoading }) => {
             type="file"
             multiple
             hidden
-            accept="images/*"
+            accept='.jpg, .png, .jpeg'
             onChange={fileUploadAndResize}
           />
         </label>
