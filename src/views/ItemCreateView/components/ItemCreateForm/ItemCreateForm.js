@@ -13,6 +13,11 @@ import {
 } from '@material-ui/core';
 import InputBase from '@material-ui/core/InputBase';
 import FormControl from '@material-ui/core/FormControl';
+import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@material-ui/core/IconButton';
+import LiveHelpIcon from '@material-ui/icons/LiveHelp';
+
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -65,6 +70,7 @@ const ItemCreateForm = props => {
     handleImage,
     handleChange,
     values,
+    user,
     setValues,
     preview,
     uploadButtonText,
@@ -74,13 +80,13 @@ const ItemCreateForm = props => {
   const classes = useStyles();
 
   let items=['előbb válassz al-kategóriát']
-  const qualities=['nem használt','alig használt','használt']
+  const qualities=['új','alig használt','használt']
   let subCategories=['előbb válassz kategóriát']
 
   if(values.category==='bútor/otthon'){
     subCategories=['benti bútor','kinti bútor','bárhol tárolható']
   }else if(values.category==='sport/szabadidő'){
-    subCategories=['labdarúgás','kosárlabda','röplabda','kézilabda','küzdősport','jégkorong/korcsolya','sakk','tenisz','vízisport','túra','futás','séta','lovaglás','téli sport','golf','asztalitenisz','társasjáték','darts','snooker/biliárd'].sort()
+    subCategories=['labdarúgás','kosárlabda','röplabda','kézilabda','küzdősport','jégkorong/korcsolya','sakk','tenisz','vízisport','kerékpár','túra','futás','séta','lovaglás','téli sport','golf','asztalitenisz','társasjáték','darts','snooker/biliárd'].sort()
   }else if(values.category==='műszaki cikk'){
     subCategories=['telefon','számítógép/PC','tablet','laptop','zenelejátszó','TV','fényképező','konzol/videójáték','nyomtató'].sort()
   }else if(values.category==='ruha'){
@@ -92,7 +98,7 @@ const ItemCreateForm = props => {
   }else if(values.category==='alkatrész'){
     subCategories=['jármű'].sort()
   }else if(values.category==='művészet'){
-    subCategories=['festmény','design','szobor'].sort()
+    subCategories=['festmény','szobor'].sort()
   }
   if(values.subCategory==='benti bútor'){
     items=['szék','asztal','kanapé','lámpa','kád','zuhany','fotel','ágy','evőeszköz','egyéb','garnitúra','szekrény','ajtó','tégla','csempe'].sort()
@@ -122,6 +128,8 @@ const ItemCreateForm = props => {
     items=['védőfelszerelés','pálca','csizma','nadrág','egyéb'].sort()
   }else if(values.subCategory==='röplabda'){
     items=['röplabda','háló','gatya','strandröplabda','egyéb'].sort()
+  }else if(values.subCategory==='kerékpár'){
+    items=['kerékpár','gatya','védőfelszerelés','kerék','egyéb'].sort()
   }else if(values.subCategory==='snooker/biliárd'){
     items=['golyó','dákó','asztal','egyéb'].sort()
   }else if(values.subCategory==='séta'){
@@ -169,9 +177,9 @@ const ItemCreateForm = props => {
   }else if(values.subCategory==='gyermek/lány'){
     items=['sapka','sál','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver','hajpánt','csat','hajgumi'].sort()
   }else if(values.subCategory==='felnőtteknek'){
-    items=['filozófia','igaz-történt','kaland/akció','scifi','egyéb','klasszikus','romantikus','komédia','rejtély','fantasy','horror','önéletrajz','történelmi']
+    items=['filozófia','igaz-történet','kaland/akció','scifi','egyéb','klasszikus','romantikus','komédia','rejtély','fantasy','horror','önéletrajz','történelmi']
   }else if(values.subCategory==='gyerekeknek'){
-    items=['igaz-történt','kaland/akció','egyéb','mese','vicces','rejtély','fantasy','történelmi','ismeretterjesztő','képeskönyv','fejlesztő','tanulságos']
+    items=['igaz-történet','kaland/akció','egyéb','mese','vicces','rejtély','fantasy','történelmi','ismeretterjesztő','képeskönyv','fejlesztő','tanulságos']
   }else if(values.subCategory==='tankönyv'){
     items=['statisztika & matek','számvitel','pénzügy','jogi','nyelvi', 'mikro & makroökonómia','politika','stratégia és szervezés','marketing','gazdaságtan','informatika','egyéb','orvosi','kémia','fizika','mérnöki','biológia','erkólcs','vallási',''].sort()
   }else if(values.subCategory==='szállítás'){
@@ -190,10 +198,6 @@ const ItemCreateForm = props => {
     items=['benti','kinti'].sort()
   }
 
-  // const children = [];
-  // for (let i = 1000; i <= 15000; i+=500) {
-  //   children.push(<Option key={i.toFixed(2)}>HUF{i}</Option>);
-  // }
 
   const theme = useTheme();
   const isMd = useMediaQuery(theme.breakpoints.up('md'), {
@@ -202,7 +206,7 @@ const ItemCreateForm = props => {
 
   return (
       <>
-        {values && values.categories!=undefined && (
+        {values && values.categories!=undefined &&  (
         <form onSubmit={handleSubmit}>
     <div className={className} {...rest}>
       <Grid container spacing={isMd ? 6 : 2}>
@@ -372,7 +376,7 @@ const ItemCreateForm = props => {
           >
              Az elérhetőségedet valamint az utca címet kizárólag azután fogja látni a vevő miután már megvette a terméked
           </Typography>
-            <p>Azt a címet add meg ahol a vevő át fogja tudni venni a terméket tőled</p>
+            <p>Azt a címet add meg ahol a vevő át fogja tudni venni a terméket tőled, nem feltétlenül kell megadnod az otthoni címedet</p>
 
           <Divider />
         </Grid>
@@ -420,7 +424,7 @@ const ItemCreateForm = props => {
             color="textPrimary"
             className={classes.inputTitle}
           >
-            Város
+            átadás Városa
           </Typography>
           <TextField
             placeholder="pl. Budapest  "
@@ -439,7 +443,7 @@ const ItemCreateForm = props => {
             color="textPrimary"
             className={classes.inputTitle}
           >
-            Utca/szám
+            Utca/szám (átadáshoz)
           </Typography>
           <TextField
             placeholder=""
@@ -449,6 +453,53 @@ const ItemCreateForm = props => {
             fullWidth
             type="text"
             value={values.street}
+            onChange={handleChange}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+        <Tooltip title={<h3 style={{ color: "lightblue" }}>A terméked eladása után levonunk egy 10%-os jutalékot amiután fogsz számlát kapni, ezért kell megadnod a számlázási címedet</h3>}>
+        <IconButton aria-label="help">
+          <LiveHelpIcon />
+        </IconButton>
+      </Tooltip>
+          <Typography
+            variant="subtitle1"
+            color="textPrimary"
+            className={classes.inputTitle}
+          >
+            Számlázási cím
+          </Typography>
+          <TextField
+            placeholder="pl. 1221 Budapest Jobbágy utca 10  "
+            variant="outlined"
+            size="medium"
+            name="billingAddress"
+            fullWidth
+            type="text"
+            value={values.billingAddress}
+            onChange={handleChange}
+          />
+        </Grid>
+        <Grid item xs={12} sm={6}>
+        <Tooltip title={<h3 style={{ color: "lightblue" }}>A terméked eladása után levonunk egy 10%-os jutalékot amiután fogsz számlát kapni, ezért kell megadnod a nevedet</h3>}>
+        <IconButton aria-label="help">
+          <LiveHelpIcon />
+        </IconButton>
+      </Tooltip>
+          <Typography
+            variant="subtitle1"
+            color="textPrimary"
+            className={classes.inputTitle}
+          >
+          Neved(számlához)
+          </Typography>
+          <TextField
+            variant="outlined"
+            size="medium"
+            name="billingNameUser"
+            fullWidth
+            type="text"
+            value={user.name}
             onChange={handleChange}
           />
         </Grid>

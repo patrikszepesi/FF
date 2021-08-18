@@ -90,6 +90,16 @@ const useStyles = makeStyles(theme => ({
     border: '1px solid'
 
   },
+  button2: {
+    margin: theme.spacing(5),
+    borderRadius: "5em",
+    height: `${theme.spacing(6)}px !important`,
+    width: `${theme.spacing(20)}px !important`,
+    color: "#ffb74d",
+    backgroundColor: "     #FFFFFF        ",
+    border: '1px solid'
+
+  },
 }));
 
 const Community = props => {
@@ -149,7 +159,7 @@ const Community = props => {
                 loading
               }
             >
-              {loading ? "Loading..." : "Pénzügyi adatok megtekíntése"}
+              {loading ? "Loading..." : "Pénzügyi adatok megtekintése"}
             </Button>
           ]}
           align="left"
@@ -174,12 +184,13 @@ const Community = props => {
         <SectionHeader
           title={
             <span>
-            Legyél te is eladó,  add meg {' '}
-              <Typography color="secondary" variant="inherit" component="span">a szükséges adatokat</Typography>
+            Adj meg pár szükséges adatot {' '}
+              <Typography color="secondary" variant="inherit" component="span">mielőtt elkezdesz eladni dolgokat</Typography>
             </span>
           }
-          subtitle=" Az eladás után 30 nap múlva érkezik a pénz a számládra Nincs semmilyen rejtett költség. Az eladási ár 90% megy a te megadott bankszámládra, és a maradék 10% pedig a mi jutalékunk"
+          subtitle=" Az eladás után 10 napon belül érkezik a pénz a számládra, Nincs semmilyen rejtett költség. Az eladási ár 90%-a megy az általad megadott bankszámládra, és a maradék 10% pedig a mi jutalékunk"
           ctaGroup={[
+            <>
             <Button
               variant="contained"
               className={classes.button}
@@ -192,6 +203,12 @@ const Community = props => {
             >
               {loading ? "Loading..." : "Kattins ide, hogy elkezd"}
             </Button>
+            <Button
+              className={classes.button2}
+              onClick={()=> router.push("/help")}>
+            Hogyan működik ?
+            </Button>
+            </>
           ]}
           align="left"
           disableGutter

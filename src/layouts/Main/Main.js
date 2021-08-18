@@ -103,16 +103,16 @@ const Main = ({ children, themeToggler, themeMode }) => {
           groupTitle: 'Általános',
           pages: [
             {
-              title: 'ÁSZF',
-              href: '/aszf',
-            },
-            {
               title: ' Hogyan Működik, Eladóknak',
               href: '/what',
             },
             {
               title: ' Hogyan Működik, Vevőknek',
               href: '/for-buyers',
+            },
+            {
+              title: 'ÁSZF',
+              href: '/aszf',
             },
 
           ],
@@ -152,16 +152,16 @@ const Main = ({ children, themeToggler, themeMode }) => {
               href: user ? '/seller/sold': '/login',
             },
             {
-              title: user? 'Jelenlegi hírdetéseim ': 'Regisztráció',
+              title: user? 'Jelenlegi hirdetéseim ': 'Regisztráció',
               href: user? '/seller': '/register',
-            },
-            {
-              title: user? 'Számláim': "Elfelejtett jelszó",
-              href:user? '/history':'/forgot-password',
             },
             {
               title: user? 'Pénzügyi adataid' :' ',
               href: user? '/seller/revenue': ' ',
+            },
+            {
+              title: user? '': "Elfelejtett jelszó",
+              href:user? '':'/forgot-password',
             },
           ],
 

@@ -36,7 +36,7 @@ const Integrations = props => {
             <Grid item xs={12} md={6}>
               <SectionHeader
                 title="Ha már nem kell valami, add el itt."
-                subtitle="Lehet valakinek pont az a régi fotogép kell ami ott porosodik a polcodon."
+                subtitle="Lehet valakinek pont az a régi fotógép kell ami ott porosodik a polcodon."
                 align="left"
                 ctaGroup={[
                   <LearnMoreLinkPlain
@@ -64,7 +64,7 @@ const Integrations = props => {
             direction={isMd ? 'row' : 'column-reverse'}
           >
             <Grid item xs={12} md={6} data-aos="fade-up">
-            <h2>Legfelkapottabb kategóriák</h2>
+            <h2 color="primary">Legfelkapottabb kategóriák</h2>
               <Grid container spacing={2}>
                 {data.map((item, index) => (
                   <Tooltip title={item.title}>

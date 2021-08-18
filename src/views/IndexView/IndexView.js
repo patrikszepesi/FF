@@ -6,7 +6,6 @@ import { GetStarted, QuickStart, Services } from './components';
 
 
 import {
-  About,
   Features,
   Hero,
   Integrations,
@@ -36,18 +35,15 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const IndexView = () => {
+const IndexView = ({themeMode}) => {
   const classes = useStyles();
 
   return (
     <div>
-      <Hero data-aos="fade-up" className={classes.hero} />
+      <Hero data-aos="fade-up" className={classes.hero} themeMode={themeMode} />
       <SectionAlternate className={classes.sectionAlternate}>
         <Integrations data={integrations} />
       </SectionAlternate>
-      <Section>
-        <About />
-      </Section>
       <SectionAlternate innerNarrowed>
         <Features />
       </SectionAlternate>

@@ -10,7 +10,7 @@ import { LearnMoreLinkPlain } from '../../../components/atoms';
 import { SectionHeader } from '../../../components/molecules';
 import { HeroShapedAuth } from '../../../components/organisms';
 import { Typography, Grid, Button, TextField } from '@material-ui/core';
-import registerImage from '../../../public/assets/reg.jpg'
+import registerSvg from '../../../public/assets/register.svg';
 
 
 
@@ -177,7 +177,9 @@ const RegisterView = () => {
                   <Grid item xs={12}>
                     <i>
                       <Typography variant="subtitle2">
-                        *Kötelező mezők
+                      A regisztráció gombra kattintva elfogadod az alábbiakat:
+                        Adatkezelési Tájékoztató, és a
+                        Flipit.store Általános Felhasználási Feltételeit
                       </Typography>
                     </i>
                   </Grid>
@@ -212,7 +214,7 @@ const RegisterView = () => {
         }
         rightSide={
           <Image
-            src={registerImage}
+            src={registerSvg}
             className={classes.image}
             lazy={false}
           />

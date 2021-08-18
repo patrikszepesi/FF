@@ -84,7 +84,7 @@ const Advantages = props => {
               </Typography>
             </span>
           }
-          subtitle="A biztonsági okok miatt minden értékesített árud bevételét 30 nap után kapod meg"
+          subtitle="A biztonsági okok miatt minden értékesített árud bevételét nem egyből, hanem 10 napon belül kapod meg"
           fadeUp
         />
 
@@ -104,7 +104,7 @@ const Advantages = props => {
               <CardBaseStripe liftUp variant="outlined">
                 <DescriptionListIcon
                   title={stripeCurrencyFormatter(bp)}
-                  subtitle={'Jelenlegi bevételek az össes eladott termék után. Beleszámolva a még be nem folyt összeget'}
+                  subtitle={'Jelenlegi bevételek az össes eladott termék után. Beleszámolva azokat az összegeket is amiket az eladó átutalt, de mi még nem utaltunk ki neked'}
                   icon={
                     <IconAlternate
                       fontIconClass={'fas fa-money-bill-wave'}

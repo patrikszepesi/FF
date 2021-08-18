@@ -46,7 +46,6 @@ const Accordion = props => {
   } = props;
 
   const classes = useStyles();
-console.log(items)
   return (
 
     <div {...rest} className={clsx('accordion', classes.root, className)}>

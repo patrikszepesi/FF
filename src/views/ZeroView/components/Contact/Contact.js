@@ -70,8 +70,8 @@ const Contact = props => {
   return (
     <div className={className} {...rest}>
       <SectionHeader
-        title="Have a project to discuss? Contact us."
-        subtitle="Keep track of what's happening with your data, change permissions, and run reports against your data anywhere in the world. Keep track of what's happening with your data, change permissions."
+        title="Kérdésed van?"
+        subtitle="Írj nekünk"
         subtitleProps={{
           variant: 'body1',
           color: 'textPrimary',
@@ -85,27 +85,6 @@ const Contact = props => {
           data-aos="fade-up"
           className={classes.listItem}
         >
-          <ListItemAvatar>
-            <Avatar
-              src="https://assets.maccarianagency.com/the-front/illustrations/contact-icon-phone.png"
-              srcSet="https://assets.maccarianagency.com/the-front/illustrations/contact-icon-phone@2x.png 2x"
-              className={classes.icon}
-            />
-          </ListItemAvatar>
-          <ListItemText
-            className={classes.listItemText}
-            primary="Phone"
-            secondary="+39 659-657-0133"
-            primaryTypographyProps={{
-              variant: 'subtitle1',
-              color: 'textSecondary',
-            }}
-            secondaryTypographyProps={{
-              variant: 'subtitle1',
-              color: 'textPrimary',
-              component: 'span',
-            }}
-          />
         </ListItem>
         <ListItem
           disableGutters
@@ -122,7 +101,7 @@ const Contact = props => {
           <ListItemText
             className={classes.listItemText}
             primary="Email"
-            secondary="hi@maccarianagency.com"
+            secondary="support@flipit.store"
             primaryTypographyProps={{
               variant: 'subtitle1',
               color: 'textSecondary',
@@ -138,93 +117,8 @@ const Contact = props => {
           data-aos="fade-up"
           className={classes.listItem}
         >
-          <ListItemAvatar>
-            <Avatar
-              src="https://assets.maccarianagency.com/the-front/illustrations/contact-icon-pin.png"
-              srcSet="https://assets.maccarianagency.com/the-front/illustrations/contact-icon-pin@2x.png 2x"
-              className={classes.icon}
-            />
-          </ListItemAvatar>
-          <ListItemText
-            className={classes.listItemText}
-            primary="Head Office"
-            secondary="Via E. Golla 4"
-            primaryTypographyProps={{
-              variant: 'subtitle1',
-              color: 'textSecondary',
-            }}
-            secondaryTypographyProps={{
-              variant: 'subtitle1',
-              color: 'textPrimary',
-            }}
-          />
         </ListItem>
       </List>
-      <div className={classes.form}>
-        <Grid container spacing={isMd ? 4 : 2}>
-          <Grid item xs={12} data-aos="fade-up">
-            <Typography
-              variant="subtitle1"
-              color="textPrimary"
-              className={classes.inputTitle}
-            >
-              Full name
-            </Typography>
-            <TextField
-              placeholder="Your full name"
-              variant="outlined"
-              size="medium"
-              name="fullname"
-              fullWidth
-              type="text"
-            />
-          </Grid>
-          <Grid item xs={12} data-aos="fade-up">
-            <Typography
-              variant="subtitle1"
-              color="textPrimary"
-              className={classes.inputTitle}
-            >
-              E-mail
-            </Typography>
-            <TextField
-              placeholder="Your e-mail address"
-              variant="outlined"
-              size="medium"
-              name="email"
-              fullWidth
-              type="email"
-            />
-          </Grid>
-          <Grid item xs={12} data-aos="fade-up">
-            <Typography
-              variant="subtitle1"
-              color="textPrimary"
-              className={classes.inputTitle}
-            >
-              Message
-            </Typography>
-            <TextField
-              placeholder="Your question about our services"
-              variant="outlined"
-              name="message"
-              fullWidth
-              multiline
-              rows={4}
-            />
-          </Grid>
-          <Grid item container justify="center" xs={12}>
-            <Button
-              variant="contained"
-              type="submit"
-              color="primary"
-              size="large"
-            >
-              Send a request
-            </Button>
-          </Grid>
-        </Grid>
-      </div>
     </div>
   );
 };

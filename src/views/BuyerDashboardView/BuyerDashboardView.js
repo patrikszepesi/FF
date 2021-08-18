@@ -14,7 +14,6 @@ import { SectionHeader } from '../../../components/molecules';
 import myImage from '../../../public/assets/undraw_Successful_purchase_re_mpig.svg'
 import LinearProgress from '@material-ui/core/LinearProgress';
 
-
 const useStyles = makeStyles(theme => ({
   rootForLoading: {
     width: '100%',
@@ -74,7 +73,7 @@ const useStyles = makeStyles(theme => ({
   coverContent: {
     [theme.breakpoints.up('md')]: {
       position: 'sticky',
-      top: '50%',
+      top: '100%',
       transform: 'translateY(-50%)',
       padding: theme.spacing(2),
     },
@@ -82,6 +81,7 @@ const useStyles = makeStyles(theme => ({
   image: {
     width: '100%',
     maxWidth: 500,
+    marginTop:'20vw',
     [theme.breakpoints.up('md')]: {
       maxWidth: '100%',
       width: 'auto',
@@ -110,7 +110,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-
+//
 const BuyerDashboardView = () => {
   const classes = useStyles();
 
@@ -120,6 +120,7 @@ const BuyerDashboardView = () => {
   } = useContext(Context);
   const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(false);
+
 
   useEffect(() => {
     loadCourses();
@@ -165,7 +166,7 @@ const BuyerDashboardView = () => {
               </div>
             </div>
             <div className={classes.content}>
-              <Story className={classes.contentSection} />
+              <Story user ={user} className={classes.contentSection} />
               <MyCourses courses={courses} className={classes.contentSection} />
               <Contact />
             </div>
