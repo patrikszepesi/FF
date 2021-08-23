@@ -3,6 +3,8 @@ import { Context } from "../../context";
 import axios from "axios";
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { useRouter } from "next/router";
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,6 +21,8 @@ const StripeCallback = () => {
     dispatch,
   } = useContext(Context);
   const classes = useStyles();
+  const router = useRouter();
+
 
 
   useEffect(() => {
@@ -30,8 +34,8 @@ const StripeCallback = () => {
           payload: res.data,
         });
         window.localStorage.setItem("user", JSON.stringify(res.data));
-        window.location.reload()
-        window.location.href = "/user";
+        router.push('/user/become-seller')
+        //window.location.href = "/user";
       });
     }
   }, [user]);

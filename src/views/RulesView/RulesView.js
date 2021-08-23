@@ -231,7 +231,7 @@ const RulesView = () => {
                   />
                 </ListItemAvatar>
                 <Typography variant="body1" color="textPrimary">
-                  Javasoljuk minden eladónak, hogy az eladott termék átadásakor írasson alá egy átvételi papírt a vevővel. Ebben az esetben a vevő nem tudja hamisan megvádolni az eladót, hogy nem adta át a terméket. Átadás-átvételi nyilatkozat nélkül a vevőnek fogunk igazat adni abban az esetben, ha a vevő azt állítja, hogy az eladó nem adta át neki a terméket. Átadás-átvételi nyilatkozat letölthető innen:    <a href="https://www.stripe.com" className={classes.link}>
+                  Javasoljuk minden eladónak, hogy az eladott termék átadásakor írasson alá egy átvételi papírt a vevővel. Ebben az esetben a vevő nem tudja hamisan megvádolni az eladót, hogy nem adta át a terméket. Átadás-átvételi nyilatkozat nélkül a vevőnek fogunk igazat adni abban az esetben, ha a vevő azt állítja, hogy az eladó nem adta át neki a terméket. Átadás-átvételi nyilatkozat letölthető innen:    <a href="https://www.flipit.store/downloads" className={classes.link}>
                       https://www.flipit.store/downloads
                     </a>
                   </Typography>
