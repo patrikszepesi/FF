@@ -40,12 +40,12 @@ const StripeCallback = () => {
         //window.location.href = "/user";
       });
     }
-  });
+  }, [user]);
 
   return (
     <div className={classes.root}>
     <h1>Ne zárd be az ablakot!</h1>
-      <CircularProgress />
+      <Button onClick={router.push("/user/become-seller")} type="button">Kattins ide, ha az oldal nem irányít át 5 másodpercen belűl</Button>
     </div>
   );
 };
