@@ -36,7 +36,7 @@ const StripeCallback = () => {
           payload: res.data,
         });
         window.localStorage.setItem("user", JSON.stringify(res.data));
-        router.push('/user/become-seller')
+        router.push('/seller/item/create')
         //window.location.href = "/user";
       });
     }
@@ -45,7 +45,7 @@ const StripeCallback = () => {
   return (
     <div className={classes.root}>
     <h1>Ne zárd be az ablakot!</h1>
-      <Button onClick={()=>router.push("/user/become-seller")} type="button">Kattins ide, ha az oldal nem irányít át 5 másodpercen belűl</Button>
+      <Button onClick={()=>router.push("/seller/item/create")} type="button">Kattins ide, ha az oldal nem irányít át 7 másodpercen belűl</Button>
     </div>
   );
 };

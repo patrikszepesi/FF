@@ -107,7 +107,7 @@ const Items = props => {
         title="Eladásra bocsátott termékeid"
         primaryCta={
           <Button onClick={()=>router.push("seller/item/create")} variant="outlined" color="primary" size="large">
-            Eladok mást is
+            Eladok valamit
           </Button>
         }
         align={'left'}

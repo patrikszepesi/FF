@@ -27,7 +27,7 @@ export const faq = {
         updated: '1.5',
       },
       {
-        title: 'Add meg annak a bankszámlaszámnak az IBAN számát ahová szeretnéd, hogy utaljuk neked a pénzt miután eladtál valamit. Ha nem tudod az IBAN számodat akkor csupán Google-ba írd be, hogy pl. "OTP bank IBAN számom " ',
+        title: 'Add meg annak a bankszámlaszámnak az IBAN számát ahová szeretnéd, hogy utaljuk neked a pénzt miután eladtál valamit. Az IBAN számod a bankszámlaszámod nemzetközi változata ami ugyanaz mint a bankszámlaszámod csak banktól eltérően az elejére kell írni a bankod kódját. Ha nem tudod az IBAN számodat akkor csupán Google-ba írd be, hogy pl. "OTP bank IBAN számom " ',
         updated: '1.6',
       },
       {

@@ -32,6 +32,8 @@ import UserRoute from "../../../../../components/routes/UserRoute";
 
 
 
+
+
 const useStyles = makeStyles(theme => ({
   appStore: {
     maxWidth: 152,
@@ -203,6 +205,7 @@ const Community = props => {
             >
               {loading ? "Loading..." : "Kattins ide, hogy elkezd"}
             </Button>
+
             <Button
               className={classes.button2}
               onClick={()=> router.push("/help")}>
