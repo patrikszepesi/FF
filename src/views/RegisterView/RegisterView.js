@@ -90,6 +90,7 @@ const RegisterView = () => {
       setEmail("");
       setPassword("");
       setLoading(false);
+      router.push("/login")
     } catch (err) {
       toast(err.response.data, {
          duration: 4000,

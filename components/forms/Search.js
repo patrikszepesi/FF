@@ -221,11 +221,11 @@ const Search = ({categoryToFilter, onFilterChange, filterObj}) => {
   }else if(filterObj.subCategory==='férfi'){
     items=['sapka','sál','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver'].sort()
   }else if(filterObj.subCategory==='női'){
-    items=['sapka','sál','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver','hajpánt','csat','hajgumi'].sort()
+    items=['sapka','sál','szoknya','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver','hajpánt','csat','hajgumi'].sort()
   }else if(filterObj.subCategory==='gyermek/fiú'){
     items=['sapka','sál','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver'].sort()
   }else if(filterObj.subCategory==='gyermek/lány'){
-    items=['sapka','sál','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver','hajpánt','csat','hajgumi'].sort()
+    items=['sapka','sál','szoknya','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver','hajpánt','csat','hajgumi'].sort()
   }else if(filterObj.subCategory==='felnőtteknek'){
     items=['filozófia','igaz-történt','kaland/akció','scifi','egyéb','klasszikus','romantikus','komédia','rejtély','fantasy','horror','önéletrajz','történelmi']
   }else if(filterObj.subCategory==='gyerekeknek'){

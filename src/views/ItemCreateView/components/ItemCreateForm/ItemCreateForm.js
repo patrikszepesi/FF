@@ -171,11 +171,11 @@ const ItemCreateForm = props => {
   }else if(values.subCategory==='férfi'){
     items=['sapka','sál','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver'].sort()
   }else if(values.subCategory==='női'){
-    items=['sapka','sál','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver','hajpánt','csat','hajgumi'].sort()
+    items=['sapka','sál','szoknya','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver','hajpánt','csat','hajgumi'].sort()
   }else if(values.subCategory==='gyermek/fiú'){
     items=['sapka','sál','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver'].sort()
   }else if(values.subCategory==='gyermek/lány'){
-    items=['sapka','sál','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver','hajpánt','csat','hajgumi'].sort()
+    items=['sapka','sál','szoknya','kesztyű','kabát','nadrág','egyéb','hosszú ujjú','rövid ujjú','strandoláshoz','zokni','cipő','papucs','overál','pulóver','hajpánt','csat','hajgumi'].sort()
   }else if(values.subCategory==='felnőtteknek'){
     items=['filozófia','igaz-történet','kaland/akció','scifi','egyéb','klasszikus','romantikus','komédia','rejtély','fantasy','horror','önéletrajz','történelmi']
   }else if(values.subCategory==='gyerekeknek'){
@@ -339,7 +339,7 @@ const ItemCreateForm = props => {
           Ár
           </Typography>
           <TextField
-            placeholder="minimum 300 Forint"
+            placeholder="minimum 750 Forint"
             variant="outlined"
             size="medium"
             name="price"

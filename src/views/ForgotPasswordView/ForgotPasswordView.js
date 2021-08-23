@@ -218,7 +218,7 @@ const ForgotPasswordView = () => {
                       color="primary"
                       fullWidth
                     >
-                      Új jelszó mentése
+                      Tovább
                     </Button>
                   </Grid>
                   <Grid item xs={12}>
