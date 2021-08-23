@@ -4,6 +4,8 @@ import axios from "axios";
 import { makeStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { useRouter } from "next/router";
+import { Button } from '@material-ui/core';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -38,7 +40,7 @@ const StripeCallback = () => {
         //window.location.href = "/user";
       });
     }
-  }, [user]);
+  });
 
   return (
     <div className={classes.root}>
