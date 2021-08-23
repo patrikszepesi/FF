@@ -22,7 +22,7 @@ const Faq = props => {
 
   return (
     <div className={className} {...rest}>
-    <h3>Elakadtál az eladói beállításoknál? Kövesd ezt a 8 egyszerű lépést</h3>
+    <h3>Elakadtál az eladói beállításoknál? Kövesd ezt a 8 lépést</h3>
 
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
@@ -47,33 +47,6 @@ const Faq = props => {
                 <CardJobMinimal
                   subtitle={item.updated}
                   title={`${item.title}`}
-                />
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <DescriptionListIcon
-            icon={
-              <IconAlternate
-                fontIconClass={data.billing.icon}
-                size="medium"
-                color={data.billing.color}
-                shape="circle"
-              />
-            }
-            title={data.billing.title}
-            subtitle={data.billing.subtitle}
-            align="left"
-            className={classes.descriptionListIcon}
-            data-aos="fade-up"
-          />
-          <Grid container spacing={2}>
-            {data.billing.items.map((item, index) => (
-              <Grid item xs={12} key={index} data-aos="fade-up">
-                <CardJobMinimal
-                  title={item.title}
-                  subtitle={`${item.updated}`}
                 />
               </Grid>
             ))}

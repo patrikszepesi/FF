@@ -163,7 +163,7 @@ const RulesView = () => {
             </List>
             <SectionHeader
               title="Reklamáció"
-              subtitle="Felelősséget nem tud vállalni az ÁÜTŐ Kft. a felrakott termékekre. Viszont, ha az átverés/csalás gyanuja merül fel akkor az eladót kitiltjuk a platformról. A pénz visszajuttatása abban az esetben lehetséges, ha a Stripe még nem utalta ki a pénzt az eladónak"
+              subtitle="Felelősséget nem tud vállalni az ÁÜTŐ Kft. a felrakott termékekre. Viszont, ha az átverés/csalás gyanuja merül fel akkor az eladót kitiltjuk a platformról. A pénz visszajuttatása abban az esetben lehetséges, ha a vevő a vásárlást követően legfeljebb 18 nap eltelte előtt keresi fel az ÁÜTŐ Kft.-t."
               align="left"
               titleProps={{
                 className: classes.fontWeightBold,
@@ -194,18 +194,7 @@ const RulesView = () => {
                   />
                 </ListItemAvatar>
                 <Typography variant="body1" color="textPrimary">
-	               Pénz visszajuttatása kizárólag abban az esetben lehetséges, ha a Stripe még nem utalta ki az ellenértéket.
-                </Typography>
-              </ListItem>
-              <ListItem disableGutters>
-                <ListItemAvatar>
-                  <Avatar
-                    src="https://assets.maccarianagency.com/the-front/illustrations/check-icon-yellow.svg"
-                    className={classes.checkBox}
-                  />
-                </ListItemAvatar>
-                <Typography variant="body1" color="textPrimary">
-                  Minden eladónak kötelessége igazolnia önmagát igazolvánnyal és valamilyen tartózkodási igazolvánnyal.
+                  Minden eladónak kötelessége igazolnia önmagát igazolvánnyal és valamilyen tartózkodási igazolvánnyal, ha a Stripe felszólítja. Ennek elmulasztása esetén a Stripe blokkolhatja/zárolhatja az eladó kifizetéseit amíg a szükséges adatok pótlása nem teljesül.
                </Typography>
               </ListItem>
             </List>
@@ -232,7 +221,20 @@ const RulesView = () => {
                   />
                 </ListItemAvatar>
                 <Typography variant="body1" color="textPrimary">
- 	                Az eladókat személyes adataikon keresztül ellenőrizzük, azonban a termékeiket nem ismerjük, így ezekért nem is nem vállalunk felelősséget.                </Typography>
+ 	                Az eladókat személyes adataikon keresztül ellenőrizzük, azonban a termékeiket nem ismerjük, így ezekért nem is nem vállalunk felelősséget.  </Typography>
+              </ListItem>
+              <ListItem disableGutters>
+                <ListItemAvatar>
+                  <Avatar
+                    src="https://assets.maccarianagency.com/the-front/illustrations/check-icon-yellow.svg"
+                    className={classes.checkBox}
+                  />
+                </ListItemAvatar>
+                <Typography variant="body1" color="textPrimary">
+                  Javasoljuk minden eladónak, hogy az eladott termék átadásakor írasson alá egy átvételi papírt a vevővel. Ebben az esetben a vevő nem tudja hamisan megvádolni az eladót, hogy nem adta át a terméket. Átadás-átvételi nyilatkozat nélkül a vevőnek fogunk igazat adni abban az esetben, ha a vevő azt állítja, hogy az eladó nem adta át neki a terméket. Átadás-átvételi nyilatkozat letölthető innen:    <a href="https://www.stripe.com" className={classes.link}>
+                      https://www.flipit.store/downloads
+                    </a>
+                  </Typography>
               </ListItem>
               <ListItem disableGutters>
                 <ListItemAvatar>
@@ -264,7 +266,18 @@ const RulesView = () => {
                   />
                 </ListItemAvatar>
                 <Typography variant="body1" color="textPrimary">
-                A regisztrációval a felhasználó beleegyezik, hogy adatait biztonságosan, hashelve elmentjük egy adatbázisba.
+                A regisztrációval az eladó beleegyezik, hogy egy az eladott terméke után járó kifizetést a vásárlás napjától 25 nap múlva kapja meg a megadott bankszámlájára.
+               </Typography>
+              </ListItem>
+              <ListItem disableGutters>
+                <ListItemAvatar>
+                  <Avatar
+                    src="https://assets.maccarianagency.com/the-front/illustrations/check-icon-yellow.svg"
+                    className={classes.checkBox}
+                  />
+                </ListItemAvatar>
+                <Typography variant="body1" color="textPrimary">
+                A regisztrációval az eladó beleegyezik, hogy egy eladott termék után az ÁÜTŐ Kft. az eladott termék 10% + ÁFÁ-ját számolja fel jutalékként.
                </Typography>
               </ListItem>
               <ListItem disableGutters>
@@ -278,6 +291,20 @@ const RulesView = () => {
                 	A regisztrációval a felhasználó beleegyezik, hogy nem fog szándékosan hamis, félrevezető termékleírást adni, aminek megsértése súlyos következményekkel jár.
                 </Typography>
               </ListItem>
+              <ListItem disableGutters>
+                <ListItemAvatar>
+                  <Avatar
+                    src="https://assets.maccarianagency.com/the-front/illustrations/check-icon-yellow.svg"
+                    className={classes.checkBox}
+                  />
+                </ListItemAvatar>
+                <Typography variant="body1" color="textPrimary">
+                A regisztrációval a vevő beleegyezik: A vásárlást követően 18 napig tehet panaszt nálunk, ha a megvásárolt terméke nem olyan mint a termékleírásban. Ebben az esetben az ÁÜTŐ Kft. visszautalhatja a vevőnek a pénz 98.6%-át mínusz 85 forintot, ha az ÁÜTŐ Kft. is úgy ítéli meg, hogy a vevőnek van igaza.
+
+
+                </Typography>
+              </ListItem>
+
               <ListItem disableGutters>
                 <ListItemAvatar>
                   <Avatar

@@ -43,9 +43,9 @@ const useStyles = makeStyles((theme) => ({
   },
 
 }));
-//
+
 const Contact = props => {
-  const { data, item, className, ...rest } = props;
+  const { item, className, ...rest } = props;
   const classes = useStyles();
   const [loading,setLoading]=useState(false)
   const [saved,setSaved]=useState('');
@@ -171,6 +171,25 @@ const Contact = props => {
             align="left"
           />
           <List disablePadding>
+          <ListItem disableGutters data-aos="fade-up">
+            <ListItemAvatar>
+              <Avatar
+                src="https://image.flaticon.com/icons/png/128/5381/5381487.png"
+                className={classes.icon}
+              />
+            </ListItemAvatar>
+            <ListItemText
+              primary="Pénzvisszafizetési garancia "
+              primaryTypographyProps={{
+                variant: 'subtitle1',
+                color: 'textSecondary',
+              }}
+              secondaryTypographyProps={{
+                variant: 'subtitle1',
+                color: 'textPrimary',
+              }}
+            />
+          </ListItem>
             <ListItem disableGutters data-aos="fade-up">
               <ListItemAvatar>
                 <Avatar
@@ -200,7 +219,7 @@ const Contact = props => {
               </ListItemAvatar>
               <ListItemText
                 primary="Ár"
-                secondary={`${item.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')} Forint`}
+                secondary={`${item.price.toFixed(0).replace(/\d(?=(\d{3})+\.)/g, '$&,')} Forint`}
                 primaryTypographyProps={{
                   variant: 'subtitle1',
                   color: 'textSecondary',
@@ -282,7 +301,6 @@ Contact.propTypes = {
   /**
    * data to be rendered
    */
-  data: PropTypes.array.isRequired,
 };
 
 export default Contact;

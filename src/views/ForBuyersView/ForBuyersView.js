@@ -55,25 +55,25 @@ const ForBuyersView = props => {
         icon: 'fas fa-user-check',
         title: 'Ellenőrzött eladók',
         subtitle:
-          'Az összes eladó ellenőrzött, ami azt jelenti, hogy a személyazonosságát megerősítette.',
+          'Az összes eladó ellenőrzött, vagy az ellenőrzési folyamatban van, ami azt jelenti, hogy a személyazonosságuk hamarosan megerősítésre fog kerülni.',
       },
       {
         icon: 'fas fa-user-shield',
         title: ' Biztonság',
         subtitle:
-          'Miután megveszel egy terméket, az eladó nem azonnal kapja meg a pénzt, tehát nem tud átverni téged hamis termékkel. Ha valami nincs rendben csak szólj nekünk. A vásárlás után az eladó kapcsolatba lép veled, hogy hol és mikor tudod átvenni a terméket.',
+          'Miután megveszel egy terméket, az eladó nem azonnal, hanem 25 nap után kapja meg a pénzt, tehát nem tud átverni téged hamis termékkel. A vásárlás után az eladó kapcsolatba lép veled, hogy hol és mikor tudod átvenni a terméket. Ha valami nincs rendben csak szólj nekünk 18 napon belül.',
       },
       {
         icon: 'fas fa-leaf',
         title: 'Zero Waste',
         subtitle:
-          'A bevételünk 5%-át különböző zöld projektekre használjuk majd fel',
+          'A bevételünk 10%-át különböző zöld projektekre használjuk majd fel.',
       },
       {
-        icon: 'fas fa-times-circle',
-        title: 'Nincsenek extra költségek',
+        icon: 'fas fa-handshake',
+        title: 'Pénzvisszafizetési garancia',
         subtitle:
-          'Nincs felesleges kiemelési díj, havi díj vagy egyéb rejtett költség. Az eladási ár 10%-át kérjük el jutalékként',
+          'Ha nem olyan volt a termék mint a termékleírásban, akkor szólj nekünk, és a pénzed közel 99%-át visszautaljuk neked.',
       },
     ]
 

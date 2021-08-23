@@ -84,7 +84,7 @@ const Advantages = props => {
               </Typography>
             </span>
           }
-          subtitle="A biztonsági okok miatt minden értékesített árud bevételét nem egyből, hanem 10 napon belül kapod meg"
+          subtitle=" Biztonsági okok miatt minden értékesített árud bevételét az eladás napjától 25 nap múlva kapod meg"
           fadeUp
         />
 

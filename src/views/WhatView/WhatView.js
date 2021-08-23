@@ -67,7 +67,7 @@ const WhatView = props => {
         icon: 'fas fa-hand-holding-usd',
         title: 'Adj el bármit',
         subtitle:
-          'Kínálj fel annyi terméket eladásra amennyit csak szeretnél. Az eladás után 7 nap múlva fog megérkezni hozzád a pénz. Ez a vevők biztonságát szolgálja'
+          'Kínálj fel annyi terméket eladásra amennyit csak szeretnél. Az eladás után 25 nap múlva fog megérkezni hozzád a pénz. Ez a vevők biztonságát szolgálja'
       },
       {
         icon: 'fas fa-exchange-alt',
@@ -105,12 +105,12 @@ const WhatView = props => {
                 title={
                   <span>
                     <Typography color="secondary" variant="inherit" component="span">
-                      Iratkozz  fel 10 perc alatt,biztonságosan,
+                      Iratkozz  fel 2 perc alatt,biztonságosan,
                     </Typography>{' '}
                     és adj el bármit
                   </span>
                 }
-                subtitle="Nincs havi díj, kiemelési díj, és egyéb rejtett költség. Minden eladás után, az eladott termék 10%-át számoljuk fel jutalékként"
+                subtitle="Nincs havi díj, kiemelési díj, és egyéb rejtett költség. Minden eladás után, az eladott termék 10% + ÁFÁ-ját számoljuk fel jutalékként"
                 align="left"
                 disableGutter
               />

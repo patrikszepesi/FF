@@ -30,6 +30,7 @@ const StripeCallback = () => {
           payload: res.data,
         });
         window.localStorage.setItem("user", JSON.stringify(res.data));
+        window.location.reload()
         window.location.href = "/user";
       });
     }
@@ -37,7 +38,7 @@ const StripeCallback = () => {
 
   return (
     <div className={classes.root}>
-    <h1>Ne zárd be az ablakot</h1>
+    <h1>Ne zárd be az ablakot!</h1>
       <CircularProgress />
     </div>
   );

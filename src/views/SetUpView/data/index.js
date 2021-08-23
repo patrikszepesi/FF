@@ -2,7 +2,7 @@ import { colors } from '@material-ui/core';
 export const faq = {
   account: {
 
-    subtitle: 'Elsö négy lépés',
+    subtitle: '',
     icon: ' fas fa-hourglass-start ',
     color: colors.amber,
     items: [
@@ -22,30 +22,27 @@ export const faq = {
         title: 'A negyedik oldalon a saját személyes adataid kell megadni',
         updated: '1.4',
       },
+      {
+        title: ' A vállalkozás webhelyére írd be, hogy: www.flipit.store. Ha egyéb adatot kér tőled a Stripe a vállalkozás adatainál akkor keresd meg azt amid rád illik, ha nem találsz semmit akkor kezd el beírni, hogy egyéb kereskedelem, és válaszd ki a feldobott opciót',
+        updated: '1.5',
+      },
+      {
+        title: 'Add meg annak a bankszámlaszámnak az IBAN számát ahová szeretnéd, hogy utaljuk neked a pénzt miután eladtál valamit. Ha nem tudod az IBAN számodat akkor csupán Google-ba írd be, hogy pl. "OTP bank IBAN számom " ',
+        updated: '1.6',
+      },
+      {
+        title: 'Hiányzó adatok kitöltése. Ha látsz egy piros négyzetet ezzel a szöveggel: "Hiányoznak egyes kötelezően megadandó adatok" akkor kattins a mellette lévő frissítés gombra. Ezután töltsd fel a szükséges adatokat. Ezt nem mindenkinél kéri a Stripe egyből.',
+        updated: '1.7',
+      },
+      {
+        title: 'Az utolsó dolog az adatok ellenőrzése. Miután ellenőrizted az adataidat nyomj a küldés gombra. Ezután már el fogsz tudni adni tárgyakat',
+        updated: '1.8',
+      },
+      {
+        title: 'Ha nem adod meg az összes megfelelő adatot akkor az oldal ki fog léptetni. Ezután újra be kell jelentkezned és meg kell adnod az összes kötelező adatot, ahhoz, hogy eladó lehess',
+        updated: '1.9',
+      },
     ],
   },
-  billing: {
 
-    subtitle: 'Második négy lépés',
-    icon: 'far fa-check-circle',
-    color: colors.indigo,
-    items: [
-      {
-        title: 'A vállalkozás adatainál keresd meg azt amid rád illik, ha nem találsz semmit akkor kezd el beírni, hogy egyéb kereskedelem, és válaszd ki a feldobott opciót. A vállalkozás webhelyére pedig írd be, hogy www.flipit.store',
-        updated: '2.1',
-      },
-      {
-        title: 'Add meg annak a bankszámlaszámnak az IBAN számát ahová szeretnéd, hogy utaljuk neked a pénzt miután eladtál valamit. Ha nem tudod az IBAN számodat akkor csupán keress rá google-ben, hogy "xy bank IBAN számom " ',
-        updated: '2.2',
-      },
-      {
-        title: 'Hiányzó adatok kitöltése. Ha látsz egy piros négyzetet ezzel a szöveggel: "Hiányoznak egyes kötelezően megadandó adatok" akkor kattins a mellette lévő frissítés gombra. Ezután töltsd fel a szükséges adatokat, hogy a személyazonosságodat valamint a lakcímedet tudjuk igazolni',
-        updated: '2.3',
-      },
-      {
-        title: 'Az utolsó dolog az adatok ellenőrzése. Miután ellenőrizted az adataidat nyomj a küldés gombra',
-        updated: '2.4',
-      },
-    ],
-  },
 };

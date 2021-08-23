@@ -29,7 +29,7 @@ const Hero = props => {
               </span>
             }
             titleVariant="h3"
-            subtitle="Csak azért mert már nem használod, nem azt jelenti, hogy valaki nem fizetne érte pénzt. Óvd a környezeted, keress pénzt és nyerjen mindenki"
+            subtitle="Minden bevételünk után, 10%-ot félreteszünk különböző zöld projektekre. Minden termékre pénzvisszafizetési garanciát vállalunk."
             ctaGroup={[
               <Button onClick={()=>router.push("/categories")}color="primary" variant="contained" size="large">
                  Miket tudok venni
@@ -41,14 +41,6 @@ const Hero = props => {
             disableGutter
           />
         </Section>
-        <Typography
-          variant="overline"
-          align="center"
-          component="p"
-          color="primary"
-        >
-          Minden bevételünk után, 10%-ot félreteszünk különböző zöld projektekre
-        </Typography>
       </HeroSimpleBackground>
     </div>
   );
