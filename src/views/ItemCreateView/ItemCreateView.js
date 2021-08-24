@@ -195,7 +195,7 @@ const ItemCreateView = (props = {}) => {
             image,
           });
           toast("Minden kész", {
-             duration: 4000,
+             duration: 1000,
         style: {
         border: '5px solid #E1C699',
         padding: '16px',

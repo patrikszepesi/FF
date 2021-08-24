@@ -101,9 +101,9 @@ const ItemCreateForm = props => {
     subCategories=['festmény','szobor'].sort()
   }
   if(values.subCategory==='benti'){
-    items=['szék','sütő','mikró','asztal','kanapé','lámpa','kád','zuhany','fotel','ágy','evőeszköz','egyéb','garnitúra','szekrény','ajtó','tégla','csempe'].sort()
+    items=['szék','sütő','mikró','asztal','hűtő','íróasztal','kanapé','lámpa','kád','zuhany','fotel','ágy','evőeszköz','egyéb','garnitúra','szekrény','ajtó','tégla','csempe'].sort()
   }else if(values.subCategory=== 'kinti'){
-    items=['napernyő','grill','napágy','kiülő','hintaágy','kinti-ágy','medence','jacuzzi','egyéb','ajtó','tégla','csempe','szék'].sort()
+    items=['napernyő','grill','napágy','kiülő','függőágy','hűtő','kertibútor','hintaágy','kinti-ágy','medence','jacuzzi','egyéb','ajtó','tégla','csempe','szék'].sort()
   }else if(values.subCategory==='bárhol tárolható'){
     items=['szék','asztal','kanapé','lámpa','kád','zuhany','ajtó','tégla','csempe','fotel','ágy','evőeszköz','egyéb','garnitúra','napernyő','napágy','kiülő','hintaágy','kinti-ágy','medence','jacuzzi'].sort()
   }else if(values.subCategory==='labdarúgás'){
