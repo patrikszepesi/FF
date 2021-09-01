@@ -136,7 +136,7 @@ const Search = ({categoryToFilter, onFilterChange, filterObj}) => {
     subCategories=['festmény','design','szobor'].sort()
     prices=['1.000 HUF','5.000 HUF','10.000 HUF','15.000 HUF','25.000 HUF','40.000 HUF','60.000 HUF','90.000 HUF','120.000 HUF','150.000 HUF','200.000 HUF','250.000 HUF','300.000 HUF','400.000 HUF','max']
   }else if(categoryToFilter==='műszaki cikk'){
-    subCategories=['telefon','számítógép/PC','tablet','laptop','zenelejátszó','TV','fényképező','konzol/videójáték','nyomtató'].sort()
+    subCategories=['telefon','számítógép/PC','tablet','laptop','zenelejátszó','TV','fényképező','konzol/videójáték','nyomtató','konyha'].sort()
     prices=['1.000 HUF','5.000 HUF','10.000 HUF','15.000 HUF','25.000 HUF','40.000 HUF','60.000 HUF','90.000 HUF','120.000 HUF','150.000 HUF','200.000 HUF','250.000 HUF','300.000 HUF','400.000 HUF','500.000 HUF','700.000 HUF','900.000 HUF','max']
   }else if(categoryToFilter==='ruha'){
     subCategories=['férfi','női','gyermek/fiú','gyermek/lány','baba/fiú','baba/lány'].sort()
@@ -151,9 +151,9 @@ const Search = ({categoryToFilter, onFilterChange, filterObj}) => {
 
 
   if(filterObj.subCategory==='benti'){
-    items=['szék','sütő','mikró','asztal','kanapé','íróasztal','hűtő','lámpa','kád','zuhany','fotel','ágy','evőeszköz','egyéb','garnitúra','szekrény','ajtó','tégla','csempe'].sort()
+    items=['szék(étkezőbe)','szék(bárszék)','szék(íróasztalhoz)','párna','asztal(íróasztal)','asztal(étkezőasztal)','asztal(dohányzóasztal)','asztal(kisasztal)','asztal(gyerekasztal)','szekrény(éjjeliszekrény)','szekrény(vitrinszekrény)','szekrény(tároló)','kanapé','gardrób',,'hűtő','lámpa','kád','polc','könyvespolc','zuhany','fotel','ágy(franciaágy)','ágy(egyszemélyes ágy)','ágy(emeletes ágy)','ágy(rácsos ágy)','evőeszköz','egyéb','garnitúra','ajtó','tégla','csempe']
   }else if(filterObj.subCategory==='kinti'){
-    items=['napernyő','napágy','kiülő','hintaágy','kinti-ágy','függőágy','hűtő','kertibútor','medence','jacuzzi','egyéb','ajtó','tégla','grill','csempe'].sort()
+    items=['napernyő','napágy','hintaágy','kültéri kanapé','kültéri asztal','étkezőgarnitúra','kinti-ágy','függőágy','hűtő','kertibútor','medence','jacuzzi','egyéb','ajtó','tégla','grill','csempe'].sort()
   }else if(filterObj.subCategory==='bárhol tárolható'){
     items=['szék','asztal','kanapé','lámpa','kád','zuhany','ajtó','tégla','csempe','fotel','ágy','evőeszköz','egyéb','garnitúra','napernyő','napágy','kiülő','hintaágy','kinti-ágy','medence','jacuzzi'].sort()
   }else if(filterObj.subCategory==='labdarúgás'){
@@ -198,6 +198,8 @@ const Search = ({categoryToFilter, onFilterChange, filterObj}) => {
     items=['sakktábla','óra','egyéb'].sort()
   }else if(filterObj.subCategory==='TV'){
     items=['LED','LCD','egyéb','OLED','QLED','projektoros'].sort()
+  }else if(filterObj.subCategory==='konyha'){
+    items=['sütő','kenyérpirítós','mikróhullámú sütő','hűtő'].sort()
   }else if(filterObj.subCategory==='fényképező'){
     items=['fotógép','videókamera','egyéb','fotógép kiegészítő','videókamera kiegészítő'].sort()
   }else if(filterObj.subCategory==='konzol/videójáték'){
